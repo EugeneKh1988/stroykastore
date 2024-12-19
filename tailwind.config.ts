@@ -24,7 +24,7 @@ export default {
           "800": "#84560f",
           "900": "#714612",
           "950": "#422406",
-          default: "#FCEC41",
+          DEFAULT: "#FCEC41",
         },
         vulcan: {
           "50": "#f5f7fa",
@@ -38,7 +38,7 @@ export default {
           "800": "#354157",
           "900": "#30394a",
           "950": "#171b24",
-          default: "#171B24",
+          DEFAULT: "#171B24",
         },
         "shuttle-gray": {
           "50": "#f5f6f6",
@@ -52,7 +52,7 @@ export default {
           "800": "#434447",
           "900": "#3b3c3e",
           "950": "#242528",
-          default: "#5D6066",
+          DEFAULT: "#5D6066",
         },
         mako: {
           "50": "#f5f6f6",
@@ -66,7 +66,7 @@ export default {
           "800": "#414449",
           "900": "#393b40",
           "950": "#232429",
-          default: "#454950",
+          DEFAULT: "#454950",
         },
         shark: {
           "50": "#f7f8f8",
@@ -80,7 +80,7 @@ export default {
           "800": "#3e424e",
           "900": "#2f323a",
           "950": "#24262d",
-          default: "#2F323A",
+          DEFAULT: "#2F323A",
         },
         "oslo-gray": {
           "50": "#f5f5f6",
@@ -94,7 +94,7 @@ export default {
           "800": "#434447",
           "900": "#3b3b3e",
           "950": "#252527",
-          default: "#8B8D92",
+          DEFAULT: "#8B8D92",
         },
         iron: {
           "50": "#f6f6f7",
@@ -108,7 +108,7 @@ export default {
           "800": "#69686b",
           "900": "#575758",
           "950": "#333234",
-          default: "#D1D1D3",
+          DEFAULT: "#D1D1D3",
         },
         "wild-sand": {
           "50": "#f6f6f6",
@@ -122,7 +122,7 @@ export default {
           "800": "#464646",
           "900": "#3d3d3d",
           "950": "#292929",
-          default: "#F6F6F6",
+          DEFAULT: "#F6F6F6",
         },
         mercury: {
           "50": "#f7f7f7",
@@ -136,11 +136,11 @@ export default {
           "800": "#63666a",
           "900": "#515357",
           "950": "#343537",
-          default: "#E8E9EA",
+          DEFAULT: "#E8E9EA",
         },
       },
       fontFamily: {
-        sans: ['Manrope', ...defaultTheme.fontFamily.sans],
+        sans: ["Manrope", ...defaultTheme.fontFamily.sans],
       },
     },
   },

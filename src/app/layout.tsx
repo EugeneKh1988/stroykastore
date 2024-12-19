@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const ManropeSans = Manrope({
-  variable: "--font-manrope-sans",
-  subsets: ["latin", "cyrillic"],
+const ManropeSans = localFont({
+  src: "../../public/fonts/Manrope-VariableFont_wght.ttf",
 });
 
 export const metadata: Metadata = {
@@ -20,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        //className={`${ManropeSans.variable} antialiased`}
+        className={`${ManropeSans.className} antialiased`}
       >
         {children}
       </body>
