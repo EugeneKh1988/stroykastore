@@ -6,7 +6,7 @@ import ToolbarButton from "./ToolbarButton";
 
 const Toolbar = () => {
   return (
-    <Container width={1196}>
+    <Container>
       <div className="flex lg:justify-between mt-4">
         <Logo />
         <div className="flex justify-end gap-4 grow">

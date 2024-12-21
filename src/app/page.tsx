@@ -1,8 +1,11 @@
 import CategoriesList from "@/components/CategoriesList";
+import DiscountsBlock from "@/components/DiscountsBlock";
 import MainCarousel from "@/components/MainCarousel";
 import Nav from "@/components/Nav";
+import PopCategoriesBlock from "@/components/PopCategoriesBlock";
+import PopularBrandsBlock from "@/components/PopularBrandsBlock";
+import PopularGoodsBlock from "@/components/PopularGoodsBlock";
 import Toolbar from "@/components/Toolbar";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -11,6 +14,10 @@ export default function Home() {
       <Toolbar />
       <CategoriesList />
       <MainCarousel />
+      <DiscountsBlock />
+      <PopCategoriesBlock />
+      <PopularGoodsBlock />
+      <PopularBrandsBlock />
     </>
   );
 }

@@ -5,7 +5,7 @@ import Container from "./Container";
 const Nav = () => {
   return (
     <div className="bg-wild-sand">
-      <Container width={1196}>
+      <Container>
         <div className="navbar min-h-4">
           <div className="navbar-start">
             <div className="dropdown">

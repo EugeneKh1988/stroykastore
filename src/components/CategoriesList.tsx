@@ -3,7 +3,7 @@ import Container from "./Container";
 const CategoriesList = () => {
   return (
     <div className="mt-4 border-y-[1px] border-y-mercury py-[10px] text-right">
-      <Container width={1196}>
+      <Container>
         <ul className="hidden lg:flex gap-[30px] text-mako font-medium text-[16px] justify-between">
           <li>
             <a href="#">Акции</a>

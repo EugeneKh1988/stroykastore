@@ -28,5 +28,6 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Manrope, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
