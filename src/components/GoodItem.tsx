@@ -28,7 +28,7 @@ const GoodItem = ({ item }: { item: IGood }) => {
         </p>
         <Button
           text="В корзину"
-          className="bg-gorse text-vulcan text-[18px] font-medium rounded-none mt-4 w-full"
+          className="bg-gorse text-vulcan text-[18px] font-medium rounded-none mt-4 w-full hover:bg-shark hover:text-white active:text-iron"
         />
       </div>
     </div>

@@ -57,44 +57,104 @@ const FooterBlock = () => {
           </div>
           <ul className="list-none space-y-3">
             <li>
-              <a href="#">Личный кабинет</a>
+              <a
+                href="#"
+                className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
+              >
+                Личный кабинет
+              </a>
             </li>
             <li>
-              <a href="#">Заказы</a>
+              <a
+                href="#"
+                className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
+              >
+                Заказы
+              </a>
             </li>
             <li>
-              <a href="#">Избранное</a>
+              <a
+                href="#"
+                className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
+              >
+                Избранное
+              </a>
             </li>
             <li>
-              <a href="#">Корзина</a>
+              <a
+                href="#"
+                className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
+              >
+                Корзина
+              </a>
             </li>
           </ul>
           <ul className="list-none space-y-3">
             <li>
-              <a href="#">Каталог</a>
+              <a
+                href="#"
+                className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
+              >
+                Каталог
+              </a>
             </li>
             <li>
-              <a href="#">Акции</a>
+              <a
+                href="#"
+                className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
+              >
+                Акции
+              </a>
             </li>
             <li>
-              <a href="#">Бренды</a>
+              <a
+                href="#"
+                className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
+              >
+                Бренды
+              </a>
             </li>
             <li>
-              <a href="#">Контакты</a>
+              <a
+                href="#"
+                className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
+              >
+                Контакты
+              </a>
             </li>
           </ul>
           <ul className="list-none space-y-3">
             <li>
-              <a href="#">Стать продавцом</a>
+              <a
+                href="#"
+                className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
+              >
+                Стать продавцом
+              </a>
             </li>
             <li>
-              <a href="#">Доставка</a>
+              <a
+                href="#"
+                className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
+              >
+                Доставка
+              </a>
             </li>
             <li>
-              <a href="#">Возврат</a>
+              <a
+                href="#"
+                className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
+              >
+                Возврат
+              </a>
             </li>
             <li>
-              <a href="#">Документация</a>
+              <a
+                href="#"
+                className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
+              >
+                Документация
+              </a>
             </li>
           </ul>
         </div>

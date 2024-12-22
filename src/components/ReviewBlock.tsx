@@ -3,8 +3,7 @@
 import { useRef } from "react";
 import Container from "./Container";
 import Image from "next/image";
-import nextIcon from "../../public/next.svg";
-import prevIcon from "../../public/prev.svg";
+import SvgIcon from "./SvgIcon";
 
 export interface IReview {
   id: number;
@@ -68,20 +67,26 @@ const ReviewBlock = () => {
           </h2>
           <div className="flex gap-3">
             <button
-              className="w-[52px] h-[52px] bg-white border-iron border-[1px]"
+              className="w-[52px] h-[52px] bg-white border-iron border-[1px] hover:bg-shark hover:text-white active:text-iron"
               onClick={() => {
                 handleHorizantalScroll(elementRef.current, 50, 370, -40);
               }}
             >
-              <Image src={prevIcon} alt="Previous" className="block mx-auto" />
+              <SvgIcon
+                iconName="prev_arrow"
+                className="block mx-auto text-center"
+              />
             </button>
             <button
-              className="w-[52px] h-[52px] bg-white border-iron border-[1px]"
+              className="w-[52px] h-[52px] bg-white border-iron border-[1px] hover:bg-shark hover:text-white active:text-iron"
               onClick={() => {
                 handleHorizantalScroll(elementRef.current, 90, 370, 40);
               }}
             >
-              <Image src={nextIcon} alt="Next" className="block mx-auto" />
+              <SvgIcon
+                iconName="next_arrow"
+                className="block mx-auto text-center"
+              />
             </button>
           </div>
         </div>

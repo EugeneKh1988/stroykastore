@@ -17,8 +17,8 @@ const SectionCaption = ({
       {noAction ? null : (
         <Button
           text={actionCaption}
-          icon="arrow_right.svg"
-          className="bg-transparent rounded-none border-iron text-vulcan text-[18px] font-medium"
+          icon="caret_right"
+          className="bg-transparent rounded-none border-iron text-vulcan text-[18px] font-medium hover:bg-shark hover:text-white active:text-iron"
         />
       )}
     </div>

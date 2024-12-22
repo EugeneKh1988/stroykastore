@@ -77,7 +77,11 @@ const PopularBrandsBlock = () => {
       <SectionCaption title="Популярные бренды" actionCaption="Все бренды" />
       <div className="flex gap-4 flex-wrap mt-4 justify-center lg:justify-start">
         {brands.map((item, index) => (
-          <a className="mx-auto max-w-[180px] border-[1px] border-mercury block" key={index} href={item.url}>
+          <a
+            className="mx-auto max-w-[180px] border-[1px] border-mercury hover:border-shuttle-gray block"
+            key={index}
+            href={item.url}
+          >
             <Image
               src={item.imageSrc}
               alt="Brand name"

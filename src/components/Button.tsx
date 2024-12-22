@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logoImage from "../../public/Logo.svg";
+import SvgIcon from "./SvgIcon";
 
 const Button =  ({
   text,
@@ -19,7 +19,7 @@ const Button =  ({
       if(iconLeft) {
         return (
           <>
-            <Image src={`/${icon}`} alt="Icon" width={24} height={24} />
+            <SvgIcon iconName={icon} />
             {text}
           </>
         );
@@ -28,7 +28,7 @@ const Button =  ({
         return (
           <>
             {text}
-            <Image src={`/${icon}`} alt="Icon" width={24} height={24} />
+            <SvgIcon iconName={icon} />
           </>
         );
       }

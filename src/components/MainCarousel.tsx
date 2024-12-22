@@ -7,6 +7,7 @@ import prevIcon from "../../public/prev.svg";
 import Button from "./Button";
 import Image from "next/image";
 import { useState } from "react";
+import SvgIcon from "./SvgIcon";
 
 const MainCarousel = () => {
     const slides = [firstSlide, secondSlide];
@@ -51,20 +52,26 @@ const MainCarousel = () => {
         <div className="flex justify-between mt-[100px] pb-10 md:pl-[100px]">
           <Button
             text="Подробнее"
-            className="bg-gorse text-vulcan text-[18px] font-medium rounded-none px-[24px]"
+            className="bg-gorse text-vulcan text-[18px] font-medium rounded-none px-[24px] hover:bg-shark hover:border-shark hover:text-white active:text-iron"
           />
           <div className="flex gap-3 mr-4">
             <button
-              className="w-[52px] h-[52px] bg-white border-iron border-[1px]"
+              className="w-[52px] h-[52px] bg-white border-iron border-[1px] hover:bg-shark hover:border-shark hover:text-white active:text-iron"
               onClick={() => prev(1)}
             >
-              <Image src={prevIcon} alt="Previous" className="block mx-auto" />
+              <SvgIcon
+                iconName="prev_arrow"
+                className="block mx-auto text-center"
+              />
             </button>
             <button
-              className="w-[52px] h-[52px] bg-white border-iron border-[1px]"
+              className="w-[52px] h-[52px] bg-white border-iron border-[1px] hover:bg-shark hover:text-white active:text-iron"
               onClick={() => next(1)}
             >
-              <Image src={nextIcon} alt="Next" className="block mx-auto" />
+              <SvgIcon
+                iconName="next_arrow"
+                className="block mx-auto text-center"
+              />
             </button>
           </div>
         </div>
@@ -87,20 +94,26 @@ const MainCarousel = () => {
         <div className="flex justify-between mt-[50px] pb-6 md:pl-[100px]">
           <Button
             text="Подробнее"
-            className="bg-gorse text-vulcan text-[18px] font-medium rounded-none px-[24px]"
+            className="bg-gorse text-vulcan text-[18px] font-medium rounded-none px-[24px] hover:bg-shark hover:text-white active:text-iron"
           />
           <div className="flex gap-3 mr-4">
             <button
-              className="w-[52px] h-[52px] bg-white border-iron border-[1px]"
+              className="w-[52px] h-[52px] bg-white border-iron border-[1px] hover:bg-shark hover:border-shark hover:text-white active:text-iron"
               onClick={() => prev(2)}
             >
-              <Image src={prevIcon} alt="Previous" className="block mx-auto" />
+              <SvgIcon
+                iconName="prev_arrow"
+                className="block mx-auto text-center"
+              />
             </button>
             <button
-              className="w-[52px] h-[52px] bg-white border-iron border-[1px]"
+              className="w-[52px] h-[52px] bg-white border-iron border-[1px] hover:bg-shark hover:border-shark hover:text-white active:text-iron"
               onClick={() => next(2)}
             >
-              <Image src={nextIcon} alt="Next" className="block mx-auto" />
+              <SvgIcon
+                iconName="next_arrow"
+                className="block mx-auto text-center"
+              />
             </button>
           </div>
         </div>
