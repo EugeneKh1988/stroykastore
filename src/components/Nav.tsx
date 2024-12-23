@@ -1,6 +1,7 @@
 import Image from "next/image";
 import positionImage from "../../public/position.svg";
 import Container from "./Container";
+import CityChoose from "./CityChoose";
 
 const Nav = () => {
   return (
@@ -53,12 +54,7 @@ const Nav = () => {
             <div className="flex justify-between">
               <div className="flex flex-nowrap">
                 <Image src={positionImage} alt="Position" className="mr-2" />
-                <a
-                  className="text-shuttle-gray font-medium text-[15px]"
-                  href="#"
-                >
-                  Киев
-                </a>
+                <CityChoose />
               </div>
             </div>
           </div>

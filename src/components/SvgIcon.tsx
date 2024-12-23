@@ -115,6 +115,7 @@ const SvgIcon = ({
         fill="none"
         stroke="currentColor"
         xmlns="http://www.w3.org/2000/svg"
+        {...classNameValue}
       >
         <path
           d="M12 5V19"
@@ -138,9 +139,34 @@ const SvgIcon = ({
         fill="none"
         stroke="currentColor"
         xmlns="http://www.w3.org/2000/svg"
+        {...classNameValue}
       >
         <path
           d="M5 12H19"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
+    close: (
+      <svg
+        width="52"
+        height="52"
+        viewBox="0 0 52 52"
+        fill="none"
+        stroke="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        {...classNameValue}
+      >
+        <path
+          d="M39 13L13 39"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M13 13L39 39"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
