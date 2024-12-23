@@ -1,18 +1,12 @@
 import Container from "./Container";
 import DiscountItem from "./DiscountItem";
+import { IGood } from "./PopularGoodsBlock";
 import SectionCaption from "./SectionCaption";
 
-export interface IDiscountGood {
-    name: string,
-    url: string,
-    imageSrc: string,
-    currentPrice: number,
-    oldPrice: number,
-    discount: number,
-};
 
-const goods: IDiscountGood[] = [
+const goods: IGood[] = [
   {
+    id: 1,
     name: "Рубероид РКП-350 ТУ, размер материала 1 х 10 м (10м2, 1 рулон)",
     url: "#",
     imageSrc: "/ruberoid.png",
@@ -21,6 +15,7 @@ const goods: IDiscountGood[] = [
     discount: -25,
   },
   {
+    id: 2,
     name: "Пена монтажная ТЕХНОНИКОЛЬ MASTER 65 профессиональная всесезонная",
     url: "#",
     imageSrc: "/foam.png",
@@ -29,6 +24,7 @@ const goods: IDiscountGood[] = [
     discount: -25,
   },
   {
+    id: 3,
     name: 'Сетка "Рабица" яч. 50х50/1,5х10 м-ОЦ',
     url: "#",
     imageSrc: "/net.png",
@@ -37,6 +33,7 @@ const goods: IDiscountGood[] = [
     discount: -25,
   },
   {
+    id: 4,
     name: "Металлочерепица, цвет коричневый, 1.18 х 1.15 м",
     url: "#",
     imageSrc: "/tiles.png",

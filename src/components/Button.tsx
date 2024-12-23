@@ -5,14 +5,17 @@ const Button =  ({
   text,
   className,
   icon,
-  iconLeft
+  iconLeft,
+  onClick,
 }: {
   text: string,
   className?: string,
   icon?: string,
   iconLeft?: boolean,
+  onClick?: () => void,
 }) => {
   //const btnIcon = icon ?  await import(`../../public/${icon}`) : "";
+  const onClickValue = onClick ? {onClick} : {};
  
   const withIcon = () => {
     if(icon) {
@@ -41,7 +44,7 @@ const Button =  ({
     }
   };
   return (
-    <button className={`btn ${className}`}>
+    <button className={`btn ${className}`} {...onClickValue}>
       {withIcon()}
     </button>
   );

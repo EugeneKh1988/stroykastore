@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Button from "./Button";
 import { IGood } from "./PopularGoodsBlock";
+import BuyBtn from "./BuyBtn";
 
 const GoodItem = ({ item }: { item: IGood }) => {
   return (
@@ -26,10 +27,7 @@ const GoodItem = ({ item }: { item: IGood }) => {
             {item.currentPrice} ₽
           </span>
         </p>
-        <Button
-          text="В корзину"
-          className="bg-gorse text-vulcan text-[18px] font-medium rounded-none mt-4 w-full hover:bg-shark hover:text-white active:text-iron"
-        />
+        <BuyBtn good={item} text="В корзину" />
       </div>
     </div>
   );

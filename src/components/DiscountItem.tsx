@@ -1,11 +1,12 @@
 import Image from "next/image";
-import { IDiscountGood } from "./DiscountsBlock";
 import Button from "./Button";
+import { IGood } from "./PopularGoodsBlock";
+import BuyBtn from "./BuyBtn";
 
 const DiscountItem = ({
   item,
 }: {
-  item: IDiscountGood;
+  item: IGood;
 }) => {
   return (
     <div className="flex">
@@ -36,10 +37,7 @@ const DiscountItem = ({
             {item.oldPrice} ₽
           </span>
         </p>
-        <Button
-          text="В корзину"
-          className="bg-gorse text-vulcan text-[18px] font-medium rounded-none mt-4 w-full hover:bg-shark hover:text-white active:text-iron"
-        />
+        <BuyBtn good={item} text="В корзину" />
       </div>
     </div>
   );
