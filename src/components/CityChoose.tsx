@@ -92,7 +92,10 @@ const CityChoose = () => {
     const city = fromLocalStorage();
     if(city && city.id > 0 && cityId != city.id) {
         setCityId(city.id);
-        cities.filter(knownCity => knownCity.id == city.id).length == 0 ? setCities([...cities, ...[city]]) : null;
+        const filterCitities = cities.filter(knownCity => knownCity.id == city.id);
+        if(filterCitities.length == 0) {
+            setCities([...cities, ...[city]]);
+        }
     }
   }, []);
 

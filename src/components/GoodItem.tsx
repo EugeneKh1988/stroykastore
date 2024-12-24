@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Button from "./Button";
 import { IGood } from "./PopularGoodsBlock";
 import BuyBtn from "./BuyBtn";
 

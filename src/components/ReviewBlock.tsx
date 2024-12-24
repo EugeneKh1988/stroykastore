@@ -47,10 +47,12 @@ const reviews: IReview[] = [
 const ReviewBlock = () => {
   const elementRef = useRef(null);
 
-  const handleHorizantalScroll = (element:any, speed:number, distance:number, step:number) => {
+  const handleHorizantalScroll = (element: { scrollLeft: number; } | null, speed:number, distance:number, step:number) => {
     let scrollAmount = 0;
     const slideTimer = setInterval(() => {
-      element.scrollLeft += step;
+      if(element) {
+        element.scrollLeft += step;
+      }
       scrollAmount += Math.abs(step);
       if (scrollAmount >= distance) {
         clearInterval(slideTimer);

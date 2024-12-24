@@ -1,16 +1,10 @@
 'use client'
 
-import firstSlide from "../../public/slide_1.png";
-import secondSlide from "../../public/slide_2.png";
-import nextIcon from "../../public/next.svg";
-import prevIcon from "../../public/prev.svg";
 import Button from "./Button";
-import Image from "next/image";
 import { useState } from "react";
 import SvgIcon from "./SvgIcon";
 
 const MainCarousel = () => {
-    const slides = [firstSlide, secondSlide];
     const totalSlides = 2;
     const [currentSlide, setSlide] = useState(1);
     

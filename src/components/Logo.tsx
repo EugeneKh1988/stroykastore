@@ -1,18 +1,13 @@
 import Image from "next/image";
 import logoImage from "../../public/Logo.svg";
+import Link from "next/link";
 
-const Logo = ({
-  children,
-  width,
-}: {
-  children?: React.ReactNode;
-  width?: number;
-}) => {
+const Logo = () => {
   return (
     <div className="mr-2">
-      <a href="/">
+      <Link href="/">
         <Image src={logoImage} alt="Logo" />
-      </a>
+      </Link>
     </div>
   );
 };

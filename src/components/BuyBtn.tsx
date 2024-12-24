@@ -48,14 +48,14 @@ const BuyBtn = ({ good, text }: { good: IGood; text: string }) => {
     if(localStorageGoods && localStorageGoods[good.id]) {
       // update count
       if(buyCount > 0) {
-        let copyGoods = fromLocalStorage();
+        const copyGoods = fromLocalStorage();
         copyGoods[good.id].count = buyCount;
         setLocalStorageGoods(copyGoods);
         localStorage.setItem("cartGoods", JSON.stringify(copyGoods));
       }
       else {
         // remove if count is 0 
-        let copyGoods = fromLocalStorage();
+        const copyGoods = fromLocalStorage();
         delete copyGoods[good.id];
         setLocalStorageGoods(copyGoods);
         localStorage.setItem("cartGoods", JSON.stringify(copyGoods));
@@ -66,7 +66,7 @@ const BuyBtn = ({ good, text }: { good: IGood; text: string }) => {
       if(buyCount > 0) {
         // update count 
         const cartGood: ICartGood = { ...good, count: buyCount };
-        let copyGoods = fromLocalStorage();
+        const copyGoods = fromLocalStorage();
         copyGoods[good.id] = cartGood;
         setLocalStorageGoods(copyGoods);
         localStorage.setItem("cartGoods", JSON.stringify(copyGoods));

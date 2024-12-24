@@ -1,4 +1,3 @@
-import Image from "next/image";
 import SvgIcon from "./SvgIcon";
 
 const Button =  ({
