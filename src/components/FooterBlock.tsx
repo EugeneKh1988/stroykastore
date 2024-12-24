@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Container from "./Container";
+import Link from "next/link";
 
 
 const FooterBlock = () => {
@@ -133,12 +134,12 @@ const FooterBlock = () => {
               </a>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                href="/delivery"
                 className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
               >
                 Доставка
-              </a>
+              </Link>
             </li>
             <li>
               <a

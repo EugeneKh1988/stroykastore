@@ -173,6 +173,30 @@ const SvgIcon = ({
         />
       </svg>
     ),
+    breadcrumb_arrow: (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        stroke="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        {...classNameValue}
+      >
+        <path
+          d="M1 8H12.6667"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M6.8335 2.16699L12.6668 8.00033L6.8335 13.8337"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    ),
   };
 
   const Icon = icons[iconName];

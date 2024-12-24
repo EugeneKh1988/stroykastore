@@ -2,6 +2,7 @@ import Image from "next/image";
 import positionImage from "../../public/position.svg";
 import Container from "./Container";
 import CityChoose from "./CityChoose";
+import Link from "next/link";
 
 const Nav = () => {
   return (
@@ -38,7 +39,7 @@ const Nav = () => {
                   <a>Бренды</a>
                 </li>
                 <li>
-                  <a>Доставка</a>
+                  <Link href="/delivery">Доставка</Link>
                 </li>
                 <li>
                   <a>Возврат</a>
@@ -64,7 +65,7 @@ const Nav = () => {
                 <a href="#">Бренды</a>
               </li>
               <li>
-                <a href="#">Доставка</a>
+                <Link href="/delivery">Доставка</Link>
               </li>
               <li>
                 <a href="#">Возврат</a>
