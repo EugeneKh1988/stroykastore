@@ -42,7 +42,7 @@ const Nav = () => {
                   <Link href="/delivery">Доставка</Link>
                 </li>
                 <li>
-                  <a>Возврат</a>
+                  <Link href="/return">Возврат</Link>
                 </li>
                 <li>
                   <a>Документация</a>
@@ -68,7 +68,7 @@ const Nav = () => {
                 <Link href="/delivery">Доставка</Link>
               </li>
               <li>
-                <a href="#">Возврат</a>
+                <Link href="/return">Возврат</Link>
               </li>
               <li>
                 <a href="#">Документация</a>

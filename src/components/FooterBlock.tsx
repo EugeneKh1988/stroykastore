@@ -142,12 +142,12 @@ const FooterBlock = () => {
               </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                href="/return"
                 className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
               >
                 Возврат
-              </a>
+              </Link>
             </li>
             <li>
               <a
