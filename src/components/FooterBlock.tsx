@@ -116,12 +116,12 @@ const FooterBlock = () => {
               </a>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                href="/contacts"
                 className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
               >
                 Контакты
-              </a>
+              </Link>
             </li>
           </ul>
           <ul className="list-none space-y-3">

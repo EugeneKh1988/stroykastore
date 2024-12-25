@@ -48,7 +48,7 @@ const Nav = () => {
                   <Link href="/docs">Документация</Link>
                 </li>
                 <li>
-                  <a>Контакты</a>
+                  <Link href="/contacts">Контакты</Link>
                 </li>
               </ul>
             </div>
@@ -74,7 +74,7 @@ const Nav = () => {
                 <Link href="/docs">Документация</Link>
               </li>
               <li>
-                <a href="#">Контакты</a>
+                <Link href="/contacts">Контакты</Link>
               </li>
             </ul>
           </div>
