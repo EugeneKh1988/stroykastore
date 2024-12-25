@@ -150,12 +150,12 @@ const FooterBlock = () => {
               </Link>
             </li>
             <li>
-              <a
-                href="#"
+              <Link
+                href="/docs"
                 className="hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
               >
                 Документация
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

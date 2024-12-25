@@ -45,7 +45,7 @@ const Nav = () => {
                   <Link href="/return">Возврат</Link>
                 </li>
                 <li>
-                  <a>Документация</a>
+                  <Link href="/docs">Документация</Link>
                 </li>
                 <li>
                   <a>Контакты</a>
@@ -71,7 +71,7 @@ const Nav = () => {
                 <Link href="/return">Возврат</Link>
               </li>
               <li>
-                <a href="#">Документация</a>
+                <Link href="/docs">Документация</Link>
               </li>
               <li>
                 <a href="#">Контакты</a>
