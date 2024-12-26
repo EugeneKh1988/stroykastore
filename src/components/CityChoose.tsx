@@ -10,16 +10,15 @@ const CityChoose = () => {
   const [cityQuery, setCityQuery] = useState("popular");
   // fetch cities
   const fetcher = (args: string) => fetch(args).then((res) => res.json());
-  const { data, error, isLoading } = useSWR<ICity[]>(`/api/cities?query=${cityQuery}`, fetcher);
+  const { data, error, } = useSWR<ICity[]>(`/api/cities?query=${cityQuery}`, fetcher);
 
   const [shown, showModal] = useState(false);
-  const [cityId, setCityId] = useState(0);
-  const [localStorageCity, setLocalStorageCity] = useState<ICity>({} as ICity);
+  const [city, setCity] = useState<ICity>({id: 0, name: ""});
   const [cities, setCities] = useState<ICity[]>([]);
 
-  const chooseCity = (id: number) => {
-    setCityId(id);
-    toLocalStorage();
+  const chooseCity = (city: ICity) => {
+    setCity(city);
+    //toLocalStorage(id);
   };
 
   // set query to find city
@@ -44,32 +43,41 @@ const CityChoose = () => {
 
   // save city to localStorage
   useEffect(() => {
-    toLocalStorage();
-  }, [cityId]);
+    if(city && city.id > 0) {
+      toLocalStorage();
+    }
+  }, [city]);
 
-  // load city from localStorage
+  // load city from localStorage after page ready
   useEffect(() => {
-    const city = fromLocalStorage();
-    if(city && city.id > 0 && cityId != city.id) {
-        setCityId(city.id);
-        const filterCitities = cities.filter(knownCity => knownCity.id == city.id);
-        if(filterCitities.length == 0) {
-            setCities([...cities, ...[city]]);
-        }
+    const localStorageCity= fromLocalStorage();
+    if (
+      localStorageCity &&
+      localStorageCity.id > 0 &&
+      city.id != localStorageCity.id
+    ) {
+      setCity(localStorageCity);
+      /* const filterCitities = cities.filter(
+        (knownCity) => knownCity.id == city.id
+      );
+      if (filterCitities.length == 0) {
+        setCities([...cities, ...[city]]);
+      } */
     }
   }, []);
 
-  // return name by id
+  // return current city name
   const cityName = () => {
-    const cityArr = cities.filter((city) => city.id == cityId);
-    return cityArr && cityArr.length > 0 ? cityArr[0].name : "Укажите город";
+    return city && city.name
+      ? city.name
+      : "Укажите город";
   };
 
   // set city to localStorage
   const toLocalStorage = () => {
     // update city
-    if (localStorageCity.id != cityId && cityId > 0) {
-      const city: ICity = { id: cityId, name: cityName() };
+    const localStorageCity = fromLocalStorage();
+    if (localStorageCity && localStorageCity.id != city.id && city.id > 0) {
       localStorage.setItem("city", JSON.stringify(city));
     }
   };
@@ -79,7 +87,6 @@ const CityChoose = () => {
     const cityStr = localStorage.getItem("city");
     if (cityStr) {
       const city: ICity = JSON.parse(cityStr);
-      setLocalStorageCity(city);
       return city;
     } else {
       return null;
@@ -101,13 +108,16 @@ const CityChoose = () => {
           <h2 className="font-semibold text-[34px] text-center text-shark leading-[44.2px]">
             Выберите ваш город
           </h2>
-          <SearchInput className="max-w-full mt-6" onChange={(e) => setCityQuery(e.currentTarget.value)} />
+          <SearchInput
+            className="max-w-full mt-6"
+            onChange={(e) => findCity(e.currentTarget.value)}
+          />
           <div className="mt-6 grid grid-cols-3 text-shark text-[16px] leading-6 gap-y-4">
             {cities.map((city) => (
               <a
                 className="cursor-pointer hover:before:mr-1 hover:before:content-['\2192'] before:transition-all before:duration-200"
                 key={city.id}
-                onClick={() => chooseCity(city.id)}
+                onClick={() => chooseCity(city)}
               >
                 {city.name}
               </a>

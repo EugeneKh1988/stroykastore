@@ -65,6 +65,10 @@ const _cities: ICity[] = [
     id: 15,
     name: "Житомир",
   },
+  {
+    id: 16,
+    name: "Луцк",
+  },
 ]; 
 
 export function GET(request: NextRequest) {
