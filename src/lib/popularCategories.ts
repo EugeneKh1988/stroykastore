@@ -1,7 +1,10 @@
+
+
 export interface ICategory {
   name: string;
   url: string;
-  imageSrc: string;
+  imageSrc?: string;
+  subCategories?: ICategory[],
 }
 
 const categories: ICategory[] = [

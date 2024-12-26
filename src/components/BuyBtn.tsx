@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { IGood } from "./PopularGoodsBlock";
 import Button from "./Button";
+import { IGood } from "@/lib/popularGoods";
 
 interface ICartGood extends IGood {
   count: number,

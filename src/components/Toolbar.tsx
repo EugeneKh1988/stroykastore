@@ -16,6 +16,7 @@ const Toolbar = () => {
               icon="bar"
               iconLeft
               className="bg-gorse text-vulcan text-[18px] font-medium rounded-none hover:bg-shark hover:text-white active:text-iron"
+              href="/catalog"
             />
             <SearchInput />
           </div>

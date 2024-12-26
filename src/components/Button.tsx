@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SvgIcon from "./SvgIcon";
 
 const Button =  ({
@@ -6,12 +7,14 @@ const Button =  ({
   icon,
   iconLeft,
   onClick,
+  href,
 }: {
   text: string,
   className?: string,
   icon?: string,
   iconLeft?: boolean,
   onClick?: () => void,
+  href?: string,
 }) => {
   //const btnIcon = icon ?  await import(`../../public/${icon}`) : "";
   const onClickValue = onClick ? {onClick} : {};
@@ -42,11 +45,22 @@ const Button =  ({
         </>)
     }
   };
-  return (
-    <button className={`btn ${className}`} {...onClickValue}>
-      {withIcon()}
-    </button>
-  );
+
+  const buttonOrLink:() => React.ReactNode = () => {
+    if(href) {
+      return (
+        <Link className={`btn ${className}`} {...{href}}>
+          {withIcon()}
+        </Link>
+      );
+    }
+    return (
+      <button className={`btn ${className}`} {...onClickValue}>
+        {withIcon()}
+      </button>
+    );
+  };
+  return <>{buttonOrLink()}</>;
 };
 
 export default Button;

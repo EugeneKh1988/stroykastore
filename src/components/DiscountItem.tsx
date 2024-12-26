@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { IGood } from "./PopularGoodsBlock";
 import BuyBtn from "./BuyBtn";
+import { IGood } from "@/lib/popularGoods";
 
 const DiscountItem = ({
   item,
