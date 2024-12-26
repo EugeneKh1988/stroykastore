@@ -1,8 +1,10 @@
 import Image from "next/image";
 import findImage from "../../public/find.svg";
+import { ChangeEvent } from "react";
 
-const SearchInput = ({ className }: { className?: string }) => {
+const SearchInput = ({ className, onChange }: { className?: string, onChange?: (e:ChangeEvent<HTMLInputElement>) => void }) => {
   const classNameValue = className ? className : "";
+  const onChangeValue = onChange ? {onChange} : {};
   return (
     <label
       className={`flex input border-0 border-b-[1px] border-iron rounded-none max-w-[444px] 
@@ -13,6 +15,7 @@ const SearchInput = ({ className }: { className?: string }) => {
         type="text"
         className="grow hover:cursor-pointer"
         placeholder="Поиск"
+        {...onChangeValue}
       />
       <Image src={findImage} alt="Icon" />
     </label>

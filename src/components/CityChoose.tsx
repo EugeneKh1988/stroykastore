@@ -3,84 +3,44 @@
 import { useEffect, useState } from "react";
 import SearchInput from "./SearchInput";
 import Button from "./Button";
-
-interface ICity {
-    id: number,
-    name: string,
-}
-const _cities: ICity[] = [
-  {
-    id: 1,
-    name: "Киев",
-  },
-  {
-    id: 2,
-    name: "Львов",
-  },
-  {
-    id: 3,
-    name: "Днепр",
-  },
-  {
-    id: 4,
-    name: "Харьков",
-  },
-  {
-    id: 5,
-    name: "Запорожье",
-  },
-  {
-    id: 6,
-    name: "Одесса",
-  },
-  {
-    id: 7,
-    name: "Тернополь",
-  },
-  {
-    id: 8,
-    name: "Днепр",
-  },
-  {
-    id: 9,
-    name: "Ивано-Франковск",
-  },
-  {
-    id: 10,
-    name: "Винница",
-  },
-  {
-    id: 11,
-    name: "Полтава",
-  },
-  {
-    id: 12,
-    name: "Хмельницкий",
-  },
-  {
-    id: 13,
-    name: "Ровно",
-  },
-  {
-    id: 14,
-    name: "Николаев",
-  },
-  {
-    id: 15,
-    name: "Житомир",
-  },
-]; 
+import useSWR from "swr";
+import { ICity } from "@/app/api/cities/route";
 
 const CityChoose = () => {
+  const [cityQuery, setCityQuery] = useState("popular");
+  // fetch cities
+  const fetcher = (args: string) => fetch(args).then((res) => res.json());
+  const { data, error, isLoading } = useSWR<ICity[]>(`/api/cities?query=${cityQuery}`, fetcher);
+
   const [shown, showModal] = useState(false);
   const [cityId, setCityId] = useState(0);
   const [localStorageCity, setLocalStorageCity] = useState<ICity>({} as ICity);
-  const [cities, setCities] = useState<ICity[]>(_cities);
+  const [cities, setCities] = useState<ICity[]>([]);
 
   const chooseCity = (id: number) => {
     setCityId(id);
     toLocalStorage();
   };
+
+  // set query to find city
+  const findCity = (cityName:string) => {
+    if(cityName != "") {
+      setCityQuery(cityName);
+    }
+    else {
+      setCityQuery("popular");
+    }
+  };
+
+  // save loaded cities
+  useEffect(() => {
+    if(data && !error) {
+      setCities(data);
+    }
+    else {
+      setCities([]);
+    }
+  }, [data]);
 
   // save city to localStorage
   useEffect(() => {
@@ -141,7 +101,7 @@ const CityChoose = () => {
           <h2 className="font-semibold text-[34px] text-center text-shark leading-[44.2px]">
             Выберите ваш город
           </h2>
-          <SearchInput className="max-w-full mt-6" />
+          <SearchInput className="max-w-full mt-6" onChange={(e) => setCityQuery(e.currentTarget.value)} />
           <div className="mt-6 grid grid-cols-3 text-shark text-[16px] leading-6 gap-y-4">
             {cities.map((city) => (
               <a

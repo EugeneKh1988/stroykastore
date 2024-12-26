@@ -1,5 +1,5 @@
+import { ICategory } from "@/lib/popularCategories";
 import Image from "next/image";
-import { ICategory } from "./PopCategoriesBlock";
 
 const PopCategoriesItem = ({ item }: { item: ICategory }) => {
   return (
